@@ -19,7 +19,7 @@ export const getUsers = async (req, res) => {
   }
 };
 
-export const creatUser = async (req, res) => {
+export const createUser = async (req, res) => {
   try {
     await UserService.create(req.body);
     return res.status(201).json({
