@@ -16,9 +16,9 @@ class CategoryService {
     return await Category.findByIdAndUpdate(id, category);
   }
 
-  async delete(id, category) {
-    return await Category.findByIdAndDelete(id, category);
+  async delete(id) {
+    return await Category.findByIdAndDelete(id);
   }
 }
 
-export default CategoryService();
+export default new CategoryService();
