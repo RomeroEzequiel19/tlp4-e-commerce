@@ -1,2 +1,2 @@
-export const PORT = process.env.PORT;
-export const URI = process.env.URI;
+export const PORT = 3000;
+export const URI = "mongodb://127.0.0.1:27017/e-commerce";

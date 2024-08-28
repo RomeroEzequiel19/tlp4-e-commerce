@@ -5,7 +5,12 @@ const UserSchema = new Schema(
     name: String,
     lastname: String,
     date: Number,
-    rol: String,
+    nameUser: String,
+    password: String,
+    done: Boolean,
+    rol: {
+      nameRol: String,
+    },
   },
   {
     timestamps: true,

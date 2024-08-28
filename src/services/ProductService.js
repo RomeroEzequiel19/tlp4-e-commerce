@@ -16,10 +16,6 @@ class ProductService {
     return await Product.findByIdAndUpdate(id, product);
   }
 
-  async update(product) {
-    return await Product.update(product);
-  }
-
   async delete(id) {
     return await Product.findByIdAndDelete(id);
   }

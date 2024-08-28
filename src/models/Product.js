@@ -1,14 +1,23 @@
-import { model, Schema } from 'mongoose';
+import { model, Schema } from "mongoose";
+import Category from "./Category.js";
 
-
-const ProductSchema = new Schema({
+const ProductSchema = new Schema(
+  {
     name: String,
     description: String,
     price: Number,
-    category: String,
     stock: Number,
-}, {
+    categories: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "category",
+      },
+    ],
+  },
+  {
     timestamps: true,
-});
+  }
+);
 
-export default model('products', ProductSchema);
+const productos = model("products", ProductSchema);
+export default { productos };
